@@ -1,0 +1,446 @@
+
+[2021-04-26 17:44:08] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 267, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 275, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 155, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 178, in embed_browser
+    (width, height) = self.browser_panel.GetClientSize().Get()
+AttributeError: 'MainFrame' object has no attribute 'browser_panel'
+
+
+[2021-04-26 17:47:17] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 269, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 96, in __init__
+    self.panel_1 = wx.Panel(self,wx.ID_ANY)
+RuntimeError: super-class __init__() of type MainFrame was never called
+
+
+[2021-04-26 19:15:34] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 274, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 282, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 133, in __init__
+    sizer_2.Add(wx.Button(self.browser_panel,wx.ID_ANY))
+AttributeError: 'MainFrame' object has no attribute 'browser_panel'
+
+
+[2021-04-26 19:33:13] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 165, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 190, in embed_browser
+    assert browser_pane.GetHandle(), "Window handle not available"
+NameError: name 'browser_pane' is not defined
+
+
+[2021-04-26 19:41:47] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 165, in __init__
+    sizer1.Add(self.embed_browser())
+wx._core.wxAssertionError: C++ assertion ""window"" failed at ..\..\src\common\sizer.cpp(186) in wxSizerItem::DoSetWindow(): NULL window in wxSizerItem::SetWindow()
+
+
+[2021-04-26 20:02:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 203, in OnSetFocus
+    self.browser.SetFocus(True)
+  File "browser.pyx", line 567, in cefpython_py38.PyBrowser.SetFocus
+  File "browser.pyx", line 568, in cefpython_py38.PyBrowser.SetFocus
+  File "browser.pyx", line 217, in cefpython_py38.PyBrowser.GetCefBrowserHost
+  File "browser.pyx", line 212, in cefpython_py38.PyBrowser.GetCefBrowser
+Exception: PyBrowser.GetCefBrowser() failed: CefBrowser was destroyed
+
+
+[2021-04-26 20:04:48] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 279, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 287, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
+    window_info.SetAsChild(self.browser_panel.GetHandle(),Left
+TypeError: 'Edge' object is not subscriptable
+
+
+[2021-04-26 20:04:57] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 279, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 287, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
+    window_info.SetAsChild(self.browser_panel.GetHandle(),left
+NameError: name 'left' is not defined
+
+
+[2021-04-26 20:05:42] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
+    window_info.SetAsChild(self.browser_panel.GetHandle(),left)
+NameError: name 'left' is not defined
+
+
+[2021-04-26 20:06:42] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
+    window_info.SetAsChild(self.browser_panel.GetHandle(),windowRect.left)
+NameError: name 'windowRect' is not defined
+
+
+[2021-04-26 20:13:50] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 140, in __init__
+    self.browser_panel.setsi
+AttributeError: 'Panel' object has no attribute 'setsi'
+
+
+[2021-04-26 20:37:29] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
+    self.sizer1.Add(self,wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'))
+TypeError: Sizer.Add(): arguments did not match any overloaded call:
+  overload 1: argument 2 has unexpected type 'Button'
+  overload 2: argument 2 has unexpected type 'Button'
+  overload 3: argument 1 has unexpected type 'MainFrame'
+  overload 4: argument 1 has unexpected type 'MainFrame'
+  overload 5: argument 1 has unexpected type 'MainFrame'
+  overload 6: argument 1 has unexpected type 'MainFrame'
+  overload 7: argument 1 has unexpected type 'MainFrame'
+  overload 8: argument 1 has unexpected type 'MainFrame'
+  overload 9: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-26 20:37:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
+    self.sizer1.Add(self.browser_panel,wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'))
+TypeError: Sizer.Add(): arguments did not match any overloaded call:
+  overload 1: argument 2 has unexpected type 'Button'
+  overload 2: argument 2 has unexpected type 'Button'
+  overload 3: argument 1 has unexpected type 'Panel'
+  overload 4: argument 1 has unexpected type 'Panel'
+  overload 5: argument 1 has unexpected type 'Panel'
+  overload 6: argument 1 has unexpected type 'Panel'
+  overload 7: argument 1 has unexpected type 'Panel'
+  overload 8: argument 1 has unexpected type 'Panel'
+  overload 9: argument 1 has unexpected type 'Panel'
+
+
+[2021-04-26 20:41:17] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
+    self.sizer1.Add(wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'),0,wx.ALIGN_BOTTOM)
+wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_BOTTOM)" failed at ..\..\src\common\sizer.cpp(2136) in wxBoxSizer::DoInsert(): Vertical alignment flags are ignored in vertical sizers
+
+
+[2021-04-27 14:53:35] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 280, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 288, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 145, in __init__
+    self.sizer2.Add(wx.Button(self,wx.ID_ANY,'sheesh'),0,wx.ALIGN_RIGHT)
+wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_RIGHT)" failed at ..\..\src\common\sizer.cpp(2168) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
+
+
+[2021-04-27 16:15:15] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 177, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 68, in __init__
+    wx.Frame.__init__(self, *args, **kwds)
+TypeError: Frame(): arguments did not match any overloaded call:
+  overload 1: 'style' is not a valid keyword argument
+  overload 2: 'style' is not a valid keyword argument
+
+
+[2021-04-27 16:16:37] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 177, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 98, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 128, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 16:20:45] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 178, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 98, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 108, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 16:27:23] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 179, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 187, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 99, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 109, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 16:27:36] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 180, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 188, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 100, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 110, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 17:52:25] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 180, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 188, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 100, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 110, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:00:56] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 106, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 116, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:04:34] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 69, in __init__
+    kwds["style"] = kwds.get("style", 0) | wx.DEFAULT_FRAME_STYLE
+NameError: name 'kwds' is not defined
+
+
+[2021-04-27 18:04:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 106, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 116, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:08:37] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:20:35] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:20:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:26:01] Traceback (most recent call last):
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 193, in initialize
+    frame = MyFrame()
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:27:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MyFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:30:06] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:35:51] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
+    self.embed_browser()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
+    assert self.browser_panel.GetHandle(), "Window handle not available"
+AssertionError: Window handle not available
+
+
+[2021-04-27 18:36:39] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 70, in __init__
+    title='wxPython example', size=size)
+NameError: name 'size' is not defined
+
+
+[2021-04-27 19:25:32] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 176, in OnClose
+    self.clear_browser_references()
+AttributeError: 'MainFrame' object has no attribute 'clear_browser_references'
+
+
+[2021-04-27 19:33:09] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 215, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 223, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 117, in __init__
+    self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
+AttributeError: 'MainFrame' object has no attribute 'browser_panel'
+
+
+[2021-04-27 19:53:11] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 220, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 228, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 127, in __init__
+    self.sizer_3.Add(self.browser_panel)
+wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
+
+
+[2021-04-27 19:53:26] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 220, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 228, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 127, in __init__
+    self.sizer_3.Add(self.browser_panel)
+wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
+
+
+[2021-04-27 20:20:22] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 219, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 227, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 126, in __init__
+    self.sizer_3.Add(self.browser_panel,400,400,wx.EXPAND)
+wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_CENTRE_HORIZONTAL)" failed at ..\..\src\common\sizer.cpp(2176) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
+
+
+[2021-04-27 20:20:48] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 219, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 227, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 126, in __init__
+    self.sizer_3.Add(self.browser_panel,400,400)
+wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_CENTRE_HORIZONTAL)" failed at ..\..\src\common\sizer.cpp(2176) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
+
+
+[2021-04-27 21:03:23] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 226, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 234, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 133, in __init__
+    sizer_3.Add(self.browser_panel)
+wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
+
