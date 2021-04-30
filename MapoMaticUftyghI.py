@@ -10,24 +10,12 @@ from cefpython3 import cefpython as cef
 import sys
 import platform
 import os
-from wx.core import HORIZONTAL, PRINTBIN_USER, TE_PROCESS_ENTER
+from wx.core import HORIZONTAL
 
 WINDOWS = (platform.system() == "Windows")
 LINUX = (platform.system() == "Linux")
 MAC = (platform.system() == "Darwin")
 
-startLocation =''
-endLocation=''
-
-choices = ['Nigh University Center','Communications Building','Max Chambers Library','Math and Computer Science']
-
-ucoBuildings = {
-    'Nigh University Center' : (35.65572618535371, -97.47124943368546),
-    "Communications Building": (35.657162786958885, -97.47134177810977),
-    "Max Chambers Library" : (35.657965312633785, -97.47373031501483),
-    "Math and Computer Science": (35.653997083277126, -97.47312997269954)
-
-}
 
 WIDTH = 900
 HEIGHT = 640
@@ -38,7 +26,7 @@ HEIGHT = 640
 
 # begin wxGlade: extracode
 # end wxGlade
-apikey = 'AIzaSyDrGcqQdFJDsBWBEPkT7NoXFnTccHlTJ2U' # (your API key here)
+apikey = 'AIzaSyDNhX6JLoc3uTlVV30AhkIZ_wFDoqnYYUI' # (your API key here)
 
 def main():
     check_versions()
@@ -80,10 +68,9 @@ def scale_window_size_for_high_dpi(width, height):
 
 class MainFrame(wx.Frame):
     def __init__(self):
-        
+        self.browser = None
         # begin wxGlade: MyFrame.__init__
-        startLocation =''
-        endLocation=''
+
         
         if WINDOWS:
             # noinspection PyUnresolvedReferences, PyArgumentList
@@ -116,94 +103,43 @@ class MainFrame(wx.Frame):
         sizer_2 = wx.BoxSizer(wx.VERTICAL)
         sizer_1.Add(sizer_2, 1, wx.EXPAND, 0)
 
-        label_1 = wx.StaticText(self.panel_1, wx.ID_ANY, "Start Location")
-        sizer_2.Add(label_1, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.BOTTOM | wx.TOP, 10)
-
-        self.text_ctrl_ = wx.SearchCtrl(self.panel_1,style=wx.TE_PROCESS_ENTER)
-        self.text_ctrl_.ShowCancelButton(True)
-        self.text_ctrl_.AutoComplete(choices)
-        self.Bind(wx.EVT_SEARCHCTRL_SEARCH_BTN, self.on_enter, self.text_ctrl_)
-        
-        
-        sizer_2.Add(self.text_ctrl_, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.BOTTOM, 10)
-
-        label_2 = wx.StaticText(self.panel_1, wx.ID_ANY, "End location\n")
-        sizer_2.Add(label_2, 0, wx.ALIGN_CENTER_HORIZONTAL, 0)
-
-        self.text_ctrl_2 = wx.SearchCtrl(self.panel_1, wx.ID_ANY, "")
-        self.text_ctrl_2.ShowCancelButton(True)
-        self.text_ctrl_2.AutoComplete(choices)
-        self.Bind(wx.EVT_SEARCHCTRL_SEARCH_BTN, self.on_enter, self.text_ctrl_2)
-        
-
-        sizer_2.Add(self.text_ctrl_2, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.BOTTOM, 10)
+        self.text_ctrl_search = wx.SearchCtrl(self.panel_1, wx.ID_ANY, "Nigh Center")
+        self.text_ctrl_search.ShowCancelButton(True)
+        sizer_2.Add(self.text_ctrl_search, 0, wx.ALL | wx.EXPAND, 2)
 
         self.radio_btn_WCA = wx.RadioButton(self.panel_1, wx.ID_ANY, "Wheel Chair Access")
-        sizer_2.Add(self.radio_btn_WCA, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 10)
+        sizer_2.Add(self.radio_btn_WCA, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.ALL, 1)
 
         self.button_Submit = wx.Button(self.panel_1, wx.ID_ANY, "Submit")
-        self.Bind(wx.EVT_BUTTON, self.on_button_pressed, self.button_Submit)
         sizer_2.Add(self.button_Submit, 0, wx.ALIGN_CENTER_HORIZONTAL, 0)
         
-        self.browser_panel = wx.Panel(self.panel_1, wx.ID_ANY, style=wx.BORDER_SIMPLE)
-        self.browser_panel.SetMinSize((1000, 400))
-        # self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
-        # self.browser_panel.Bind(wx.EVT_SIZE, self.OnSize)
+        self.browser_panel = wx.Panel(self)
+        self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
+        self.browser_panel.Bind(wx.EVT_SIZE, self.OnSize)
          
-    
-        sizer_1.Add(self.browser_panel, 1, wx.EXPAND, 0)
+        self.panel_2 = wx.Panel(self.panel_1, wx.ID_ANY, style=wx.BORDER_SIMPLE)
+        self.panel_2.SetMinSize((1000, 400))
+        sizer_1.Add(self.panel_2, 1, wx.EXPAND, 0)
 
         
+        sizer_3 = wx.BoxSizer(wx.HORIZONTAL)
+        sizer_3.Add(self.browser_panel)
+        sizer_3.Add((0, 0), 0, 0, 0)
+
+        self.panel_2.SetSizer(sizer_3)
         self.panel_1.SetSizer(sizer_1)
 
         
 
         
-        # self.embed_browser('37.766956','-122.479481')
-        
+        self.embed_browser()
         self.Show()
         self.Layout()
         # end wxGlade
-
-    def on_button_pressed(self, event):  # wxGlade: MyFrame.<event_handler>
-        print("Event handler 'on_button_pressed' not implemented!")
-        event.Skip()
-   
-    def on_enter(self, event):  # wxGlade: MyFrame.<event_handler>
-        
-        
-        self.set_Start(self.text_ctrl_.GetValue())
-        self.set_End(self.text_ctrl_2.GetValue())
-        start= self.get_Start()
-        end=self.get_End()
- 
-       
-        
-        if start in ucoBuildings:
-            print(start)
-            print(ucoBuildings[start])
-        
-        if end in ucoBuildings:
-            print(end)
-            print(ucoBuildings[end])
-
-            
-
-        self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
-        event.Skip()
-
     
-    def embed_browser(self,a,b,c,d):
-
-        #Gmplot
-        
-        print(a,b,c,d)
-        lat=[a,b]
-        lng=[c,d]
-        gmap = gmplot.GoogleMapPlotter.from_geocode('100 N University Dr, Edmond, OK 73034',16, apikey=apikey)
-        gmap.scatter(lat,lng,color=['blue', 'orange'])
+    def embed_browser(self):
+        gmap = gmplot.GoogleMapPlotter.from_geocode('Chiyoda City, Tokyo', apikey=apikey)
         gmap.draw("map.html")
-        
         window_info = cef.WindowInfo()
         (width, height) = self.browser_panel.GetClientSize().Get()
         assert self.browser_panel.GetHandle(), "Window handle not available"
@@ -212,20 +148,6 @@ class MainFrame(wx.Frame):
         self.browser = cef.CreateBrowserSync(window_info,
                                              url="file:///C:/Users/ninte/Documents/School/Software%20I/Project/map.html")
         self.browser.SetClientHandler(FocusHandler())
-
-
-    def get_Start(self):
-        return self.startLocation
-    def set_Start(self,x):
-        self.startLocation = x
-    def get_End(self):
-        return self.endLocation
-    def set_End(self,x):
-        self.endLocation = x
-    
-    
-
-
     def OnSetFocus(self, _):
         
         cef.WindowUtils.OnSetFocus(self.browser_panel.GetHandle(),

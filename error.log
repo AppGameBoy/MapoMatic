@@ -444,3 +444,253 @@ wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_CENTRE_HORIZONTAL)" 
     sizer_3.Add(self.browser_panel)
 wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
 
+
+[2021-04-27 21:33:57] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
+    self.text_ctrl_search.AutoComplete('Nigh Center','Library','Mass Comm','CompSci')
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'str'
+  overload 2: argument 1 has unexpected type 'str'
+
+
+[2021-04-27 21:34:14] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
+    self.text_ctrl_search.AutoComplete(self,'Nigh Center','Library','Mass Comm','CompSci')
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'MainFrame'
+  overload 2: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-27 21:34:28] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
+    self.text_ctrl_search.AutoComplete(self,['Nigh Center','Library','Mass Comm','CompSci'])
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'MainFrame'
+  overload 2: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-27 21:37:32] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
+    self.text_ctrl_search.AutoComplete(self,buildingNames)
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'MainFrame'
+  overload 2: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-27 22:04:25] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
+    self.text_ctrl_search.AutoComplete(self,choices)
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'MainFrame'
+  overload 2: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-27 22:06:09] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
+    self.text_ctrl_search.AutoComplete(self)
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'MainFrame'
+  overload 2: argument 1 has unexpected type 'MainFrame'
+
+
+[2021-04-27 22:06:28] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
+    self.text_ctrl_search.AutoComplete()
+TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
+  overload 1: not enough arguments
+  overload 2: not enough arguments
+
+
+[2021-04-28 17:15:23] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 265, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 273, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 139, in __init__
+    self.Bind(wx.EVT_BUTTON, self.on_button_pressed, self.execute_button)
+AttributeError: 'MainFrame' object has no attribute 'execute_button'
+
+
+[2021-04-28 17:48:01] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 271, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 279, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 123, in __init__
+    print(self.text_ctrl_.GetStyle())
+AttributeError: 'SearchCtrl' object has no attribute 'GetStyle'
+
+
+[2021-04-30 13:33:38] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 217, in OnSize
+    self.browser.NotifyMoveOrResizeStarted()
+AttributeError: 'NoneType' object has no attribute 'NotifyMoveOrResizeStarted'
+
+
+[2021-04-30 15:16:53] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 177, in on_enter
+    print(startLocation.start)
+AttributeError: 'str' object has no attribute 'start'
+
+
+[2021-04-30 15:19:01] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 176, in on_enter
+    test= self.get_Start()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 213, in get_Start
+    return self.startlocation
+AttributeError: 'MainFrame' object has no attribute 'startlocation'
+
+
+[2021-04-30 15:56:34] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 176, in on_enter
+    test= self.get_Start()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 214, in get_Start
+    return self.startlocation
+AttributeError: 'MainFrame' object has no attribute 'startlocation'
+
+
+[2021-04-30 16:09:05] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 180, in on_enter
+    print(self.getStartLocation)
+AttributeError: 'MainFrame' object has no attribute 'getStartLocation'
+
+
+[2021-04-30 16:11:33] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 177, in on_enter
+    end=self.get_End()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 218, in get_End
+    return self.endLocation
+AttributeError: 'MainFrame' object has no attribute 'endLocation'
+
+
+[2021-04-30 16:16:52] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 294, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 302, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser()
+TypeError: embed_browser() missing 2 required positional arguments: 'a' and 'b'
+
+
+[2021-04-30 16:17:26] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 237, in OnSize
+    self.browser.NotifyMoveOrResizeStarted()
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-04-30 16:22:47] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_enter
+    self.embed_browser(ucoBuildings[start],ucoBuildings[end])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 201, in embed_browser
+    gmap = gmplot.GoogleMapPlotter.from_geocode((a,b),16, apikey=apikey)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 444, in from_geocode
+    lat, lng = cls.geocode(location, apikey=apikey)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 485, in geocode
+    latlng_dict = geocode['results'][0]['geometry']['location']
+IndexError: list index out of range
+
+
+[2021-04-30 16:28:21] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser('37.766956','-122.479481')
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
+    gmap.scatter(a,b)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 690, in scatter
+    raise ValueError("Number of latitudes and longitudes don't match!")
+ValueError: Number of latitudes and longitudes don't match!
+
+
+[2021-04-30 16:29:36] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser('37.766956','-122.479481')
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
+    gmap.scatter((a,b))
+TypeError: scatter() missing 1 required positional argument: 'lngs'
+
+
+[2021-04-30 16:29:54] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser('37.766956','-122.479481')
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
+    gmap.scatter(a,b)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 690, in scatter
+    raise ValueError("Number of latitudes and longitudes don't match!")
+ValueError: Number of latitudes and longitudes don't match!
+
+
+[2021-04-30 16:30:01] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser('37.766956','-122.479481')
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
+    gmap.scatter(a)
+TypeError: scatter() missing 1 required positional argument: 'lngs'
+
+
+[2021-04-30 16:35:17] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
+    self.embed_browser('37.766956','-122.479481')
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
+    gmap.scatter()
+TypeError: scatter() missing 2 required positional arguments: 'lats' and 'lngs'
+
+
+[2021-04-30 16:40:08] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 240, in OnSize
+    self.browser.NotifyMoveOrResizeStarted()
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-04-30 18:31:27] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 253, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
