@@ -17,7 +17,7 @@
         };
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(35.655726, -97.471249),
+            position: new google.maps.LatLng(35.653997, -97.473130),
             icon: marker_icon_0000FF,
             map: map
         });
@@ -28,9 +28,23 @@
         };
 
         new google.maps.Marker({
-            position: new google.maps.LatLng(35.657965, -97.473730),
+            position: new google.maps.LatLng(35.655044, -97.471418),
             icon: marker_icon_FFA500,
             map: map
+        });
+
+        new google.maps.Polyline({
+            clickable: false,
+            geodesic: true,
+            strokeColor: "#FF0000",
+            strokeOpacity: 1.000000,
+            strokeWeight: 7,
+            map: map,
+            path: [
+                new google.maps.LatLng(35.654252, -97.472709),
+                new google.maps.LatLng(35.654365, -97.472758),
+                new google.maps.LatLng(35.654385, -97.471432),
+            ]
         });
 
     }
