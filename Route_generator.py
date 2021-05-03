@@ -64,8 +64,6 @@ midDict = {
 
 
 
-print(midDict["Nigh to Lib W"])
-
 class IRouteBuilder (metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def setStart(self, startPoint):
@@ -89,39 +87,39 @@ class RouteBuilder (IRouteBuilder):
         
     def setStart(self, startPoint):
         if startPoint is choices[0]:
-            self.route.startPoint = ucobuildings["Nigh University Center"]
+            self.route.setStartPoint(ucoBuildings["Nigh University Center"])
         elif startPoint == choices[1]:
-            self.route.startPoint = ucobuildings["MaxCHambers Library"]
+            self.route.setStartPoint(ucoBuildings["Max Chambers Library"])
         elif startPoint == choices[2]:
-            self.route.startPoint = ucobuildings["Math and Computer Science"]
+            self.route.setStartPoint(ucoBuildings["Math and Computer Science"])
 
         return self
         
 
-    def setMid(self, startPoint, endPoint, wheelchair):
-        if ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheelchair == True:
-            self.route.midPoint = midDict["Nigh to Lib W"]
-        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheelchair == True:
-            self.route.midPoint = midDict["Math to Lib W"]
-        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheelchair == True:
-            self.route.midPoint = midDict["Nigh to math W"]
-        elif ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheelchair == False:
-            self.route.midPoint = midDict["Nigh to Lib NW"]
-        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheelchair == False:
-            self.route.midPoint = midDict["Math to Lib NW"]
-        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheelchair == False:
-            self.route.midPoint = midDict["Nigh to math NW"]
+    def setMid(self, startPoint, endPoint, wheel):
+        if ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheel is True:
+            self.route.setMidPoint(midDict["Nigh to Lib W"])
+        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheel is True:
+            self.route.setMidPoint(midDict["Math to Lib W"])
+        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheel is True:
+            self.route.setMidPoint(midDict["Nigh to math W"])
+        elif ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheel is False:
+            self.route.setMidPoint(midDict["Lib to Nigh NW"])
+        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheel is False:
+            self.route.setMidPoint(midDict["Math to Lib NW"])
+        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheel is False:
+            self.route.setMidPoint(midDict["Math to Nigh NW"])
 
         return self
     
 
     def setEnd(self, endPoint):
         if endPoint == choices[0]:
-            self.route.endPoint = ucobuildings["Nigh University Center"]
+            self.route.setEndPoint(ucoBuildings["Nigh University Center"])
         elif endPoint == choices[1]:
-            self.route.endPoint = ucobuildings["MaxCHambers Library"]
+            self.route.setEndPoint(ucoBuildings["Max Chambers Library"])
         elif endPoint == choices[2]:
-            self.route.endPoint = ucobuildings["Math and Computer Science"]
+            self.route.setEndPoint(ucoBuildings["Math and Computer Science"])
 
         return self
 
@@ -148,19 +146,36 @@ class Route:
             self.startPoint, self.midPoint, self.endPoint
         )
 
+    def setStartPoint(self, point):
+        self.startPoint = point
+
+    def setMidPoint(self, point):
+        self.midPoint = point
+
+    def setEndPoint(self, point):
+        self.endPoint = point
+
+    def __str__(self):
+        return "Start point is: {0} mid points are: {1} end point is; {3} ".format(
+            self.startPoint, self.midPoint, self.endPoint
+        )
+
 class RouteDirector:
     def __init__(self, builder):
         self.builder = builder
 
-    def generate(startPoint, endPoint, wheel):
-        return RouteBuilder()\
-            .setStart(startPoint)\
-            .setMid(startPoint, endPoint, wheel)\
-            .setEnd(endPoint)\
-            .get_results()
+    def generate(self, startPoint, endPoint, wheel):
+        self.builder.setStart(startPoint)
+        self.builder.setMid(startPoint, endPoint, wheel)
+        self.builder.setEnd(endPoint)
+        self.builder.get_results()
+        return self
 
 if __name__ == "__main__":
     builder = RouteBuilder()
-    RouteBuildDirector = RouteDirector(builder.setMid("Nigh University Center", "MaxCHambers Library", False))
+    route1 = RouteDirector(builder)
+    route1.generate("Nigh University Center", "Max Chambers Library", False)
 
-    print(RouteBuildDirector.generate("Nigh University Center", "MaxCHambers Library", False))
+    print(builder.route.getStartPoint())
+    print(builder.route.getMidPoint())
+    print(builder.route.getEndPoint())

@@ -11,14 +11,12 @@ import sys
 import platform
 import os
 from wx.core import BLUE, HORIZONTAL, PRINTBIN_USER, TE_PROCESS_ENTER
-import Route_generator1 
+import Route_generator
 # import test 
 
-builder = Route_generator1.RouteBuilder()
-Route_generator1.RouteDirector(builder.setMid("Nigh University Center", "MaxCHambers Library", False))
-# test.cb = test.CarBuilderImpl()
-# test.poop = test.CarBuildDirector(test.cb)
-# print(test.poop.construct())
+builder = Route_generator.RouteBuilder()
+Route_generator.RouteDirector(builder)
+
 
 
 WINDOWS = (platform.system() == "Windows")
