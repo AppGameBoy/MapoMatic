@@ -10,15 +10,188 @@ from cefpython3 import cefpython as cef
 import sys
 import platform
 import os
-from wx.core import HORIZONTAL, PRINTBIN_USER, TE_PROCESS_ENTER
-import Route_generator1 
+from wx.core import BLUE, HORIZONTAL, PRINTBIN_USER, TE_PROCESS_ENTER
+import abc
+
+
+
+
+choices = ['Nigh University Center','Max Chambers Library','Math and Computer Science']
+
+ucoBuildings = {
+    'Nigh University Center' : (35.65572618535371, -97.47124943368546),
+    "Max Chambers Library" : (35.657965312633785, -97.47373031501483),
+    "Math and Computer Science": (35.653997083277126, -97.47312997269954)
+
+}
+
+midDict = {
+    "Nigh to Lib W" :zip(*[
+        (35.65794235634459, -97.47360704924955),
+        (35.65794128726414, -97.47331916781197),
+        (35.65767540904128, -97.47332989664746),
+        (35.65765797436592, -97.47120022274068),
+        (35.65658347479419, -97.4712353441628),
+        (35.656293440101, -97.47090501606355),
+        (35.655598855156136, -97.47102941440974)
+    ]),
+    "Nigh to math W" :zip(*[ 
+        (35.65563899390924, -97.47097476725821),
+        (35.65430517303365, -97.47089231449681),
+        (35.65439847734943, -97.47301027653971),
+        (35.65397860707006, -97.47306131176967)
+    ]),
+    "Math to Lib W" :zip(*[
+        (35.65397860707006, -97.47306131176967),
+        (35.65439847734943, -97.47301027653971),
+        (35.65434423565961, -97.4730719261411),
+        (35.654684225115155, -97.47312020590076),
+        (35.65479755461205, -97.47490119259025),
+        (35.658211889572975, -97.47499775926565),
+        (35.658160056330466, -97.47430240425761),
+        (35.657921622981654, -97.47427688664263),
+        (35.65794235634459, -97.47360704924955)
+    ]),
+    "Math to Nigh NW" : zip(*[
+        (35.65425162157668, -97.47270851296994),
+        (35.65436524716877, -97.4727581330868),
+        (35.65438540653113, -97.47143192269081)
+    ]),
+    "Math to Lib NW" : zip(*[
+        (35.65425162157668, -97.47270851296994),
+        (35.65435004355568, -97.47307999503826),
+        (35.65518257921023, -97.47313363921646),
+        (35.65588870214999, -97.47356279265084),
+        (35.65649892680413, -97.47348769080808),
+        (35.65649892680413, -97.47312827481419),
+        (35.65692608130799, -97.47323019877126),
+        (35.657069918527384, -97.47349841966225),
+        (35.6579634469659, -97.47362716568992)
+    ]),
+    "Lib to Nigh NW" : zip(*[
+        (35.6579634469659, -97.47362716568992),
+        (35.65765398215114, -97.47370226749302),
+        (35.65764526481504, -97.47202856913336),
+        (35.65650764428815, -97.47193200961262),
+        (35.65449416993982, -97.47189018680612),
+        (35.654359, -97.471431)
+    ])
+}
+
+
+
+class IRouteBuilder (metaclass=abc.ABCMeta):
+    @abc.abstractmethod
+    def setStart(self, startPoint):
+        pass
+        
+    @abc.abstractmethod
+    def setMid(self, startPoint, endPoint, wheelchair):
+        pass
+    
+    @abc.abstractmethod
+    def setEnd(self, endPoint):
+        pass
+
+    @abc.abstractmethod
+    def get_results(self):
+        pass
+
+class RouteBuilder (IRouteBuilder):
+    def __init__(self):
+        self.route = Route()
+        
+    def setStart(self, startPoint):
+        if startPoint == choices[0]:
+            self.route.setStartPoint(ucoBuildings["Nigh University Center"])
+        elif startPoint == choices[1]:
+            self.route.setStartPoint(ucoBuildings["Max Chambers Library"])
+        elif startPoint == choices[2]:
+            self.route.setStartPoint(ucoBuildings["Math and Computer Science"])
+
+        return self
+        
+
+    def setMid(self, startPoint, endPoint, wheel):
+        if ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheel is True:
+            self.route.setMidPoint(midDict["Nigh to Lib W"])
+        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheel is True:
+            self.route.setMidPoint(midDict["Math to Lib W"])
+        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheel is True:
+            self.route.setMidPoint(midDict["Nigh to math W"])
+        elif ((startPoint == choices[0] and endPoint == choices[1]) or (startPoint == choices[1] and endPoint == choices[0])) and wheel is False:
+            self.route.setMidPoint(midDict["Lib to Nigh NW"])
+        elif ((startPoint == choices[1] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[1])) and wheel is False:
+            self.route.setMidPoint(midDict["Math to Lib NW"])
+        elif ((startPoint == choices[0] and endPoint == choices[2]) or (startPoint == choices[2] and endPoint == choices[0])) and wheel is False:
+            self.route.setMidPoint(midDict["Math to Nigh NW"])
+
+        return self
+    
+
+    def setEnd(self, endPoint):
+        if endPoint == choices[0]:
+            self.route.setEndPoint(ucoBuildings["Nigh University Center"])
+        elif endPoint == choices[1]:
+            self.route.setEndPoint(ucoBuildings["Max Chambers Library"])
+        elif endPoint == choices[2]:
+            self.route.setEndPoint(ucoBuildings["Math and Computer Science"])
+
+        return self
+
+    def get_results(self):
+        return self.route
+
+class Route:
+    def __init__(self):
+        self.startPoint = None
+        self.midPoint = None
+        self.endPoint = None
+
+    def getStartPoint(self):
+        return self.startPoint
+
+    def getMidPoint(self):
+        return self.midPoint
+
+    def getEndPoint(self):
+        return self.endPoint
+
+    def __str__(self):
+        return "Start point is: {0} mid points are: {1} end point is; {3} ".format(
+            self.startPoint, self.midPoint, self.endPoint
+        )
+
+    def setStartPoint(self, point):
+        self.startPoint = point
+
+    def setMidPoint(self, point):
+        self.midPoint = point
+
+    def setEndPoint(self, point):
+        self.endPoint = point
+
+    def __str__(self):
+        return "Start point is: {0} mid points are: {1} end point is; {3} ".format(
+            self.startPoint, self.midPoint, self.endPoint
+        )
+
+class RouteDirector:
+    def __init__(self, builder):
+        self.builder = builder
+
+    def generate(self, startPoint, endPoint, wheel):
+        builder.setStart(startPoint)
+        builder.setMid(startPoint, endPoint, wheel)
+        builder.setEnd(endPoint)
+        builder.get_results()
+        return self
 # import test 
 
-# builder = Route_generator1.RouteBuilder()
-# Route_generator1.RouteDirector(builder.setMid("Nigh University Center", "MaxCHambers Library", False))
-# test.cb = test.CarBuilderImpl()
-# test.poop = test.CarBuildDirector(test.cb)
-# print(test.poop.construct())
+builder = RouteBuilder()
+route1= RouteDirector(builder)
+
+
 
 
 WINDOWS = (platform.system() == "Windows")
@@ -27,38 +200,24 @@ MAC = (platform.system() == "Darwin")
 
 startLocation =''
 endLocation=''
-
-choices = ['Nigh University Center','Communications Building','Max Chambers Library','Math and Computer Science']
-
-ucoBuildings = {
-    'Nigh University Center' : (35.65572618535371, -97.47124943368546),
-    "Communications Building": (35.657162786958885, -97.47134177810977),
-    "Max Chambers Library" : (35.657965312633785, -97.47373031501483),
-    "Math and Computer Science": (35.653997083277126, -97.47312997269954)
-
-}
+building=''
 
 
 WIDTH = 900
-HEIGHT = 640
+HEIGHT = 700
 
 
-# begin wxGlade: dependencies
-# end wxGlade
-
-# begin wxGlade: extracode
-# end wxGlade
 apikey = 'AIzaSyDrGcqQdFJDsBWBEPkT7NoXFnTccHlTJ2U' # (your API key here)
 
 def main():
     check_versions()
-    sys.excepthook = cef.ExceptHook  # To shutdown all CEF processes on error
+    sys.excepthook = cef.ExceptHook  
     settings = {}
     cef.DpiAware.EnableHighDpiSupport()
     cef.Initialize(settings=settings)
     app = CefApp(False)
     app.MainLoop()
-    del app  # Must destroy before calling Shutdown
+    del app  
 
     cef.Shutdown()
 
@@ -68,7 +227,7 @@ def check_versions():
     print("[wxpython.py] Python {ver} {arch}".format(
             ver=platform.python_version(), arch=platform.architecture()[0]))
     print("[wxpython.py] wxPython {ver}".format(ver=wx.version()))
-    # CEF Python version requirement
+    
     assert cef.__version__ >= "66.0", "CEF Python v66.0+ required to run this"
 
 
@@ -80,7 +239,7 @@ def scale_window_size_for_high_dpi(width, height):
     if not WINDOWS:
         return width, height
     (_, _, max_width, max_height) = wx.GetClientDisplayRect().Get()
-    # noinspection PyUnresolvedReferences
+    
     (width, height) = cef.DpiAware.Scale((width, height))
     if width > max_width:
         width = max_width
@@ -91,13 +250,11 @@ def scale_window_size_for_high_dpi(width, height):
 class MainFrame(wx.Frame):
     def __init__(self):
         
-        # begin wxGlade: MyFrame.__init__
-        # startLocation =''
-        # endLocation=''
+        
         self.wheelChair=False
         
         if WINDOWS:
-            # noinspection PyUnresolvedReferences, PyArgumentList
+            
             print("[wxpython.py] System DPI settings: %s"
                   % str(cef.DpiAware.GetSystemDpi()))
         if hasattr(wx, "GetDisplayPPI"):
@@ -113,7 +270,7 @@ class MainFrame(wx.Frame):
 
 
 
-        wx.Frame.__init__(self,parent=None, id=wx.ID_ANY,title='wxPython example', size=size)
+        wx.Frame.__init__(self,parent=None, id=wx.ID_ANY, size=size)
         print("[wxpython.py] MainFrame actual size: %s" % self.GetSize())
         self.Bind(wx.EVT_CLOSE, self.OnClose)
 
@@ -159,51 +316,60 @@ class MainFrame(wx.Frame):
         self.button_Submit = wx.Button(self.panel_1, wx.ID_ANY, "Submit")
         self.Bind(wx.EVT_BUTTON, self.on_button_pressed, self.button_Submit)
         sizer_2.Add(self.button_Submit, 0, wx.ALIGN_CENTER_HORIZONTAL, 0)
+
+
+        label_3 = wx.StaticText(self.panel_1, wx.ID_ANY, "Singular Building Search\n")
+        sizer_2.Add(label_3, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.TOP, 11)
+
+        self.text_ctrl__copy = wx.SearchCtrl(self.panel_1, wx.ID_ANY, "")
+        self.text_ctrl__copy.ShowCancelButton(True)
+        self.text_ctrl__copy.AutoComplete(choices)
+
+        sizer_2.Add(self.text_ctrl__copy, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.BOTTOM, 10)
+        self.Bind(wx.EVT_SEARCHCTRL_SEARCH_BTN, self.on_Search_Enter, self.text_ctrl__copy)
         
         self.browser_panel = wx.Panel(self.panel_1, wx.ID_ANY, style=wx.BORDER_SIMPLE)
         self.browser_panel.SetMinSize((1000, 400))
-        # self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
-        # self.browser_panel.Bind(wx.EVT_SIZE, self.OnSize)
-         
+        self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
+        self.browser_panel.Bind(wx.EVT_SIZE, self.OnSize)
+        
+        self.embed2()
     
         sizer_1.Add(self.browser_panel, 1, wx.EXPAND, 0)
+        
+        
 
         
         self.panel_1.SetSizer(sizer_1)
         
         
-
         
-       
+        
+        
         
         self.Show()
         self.Layout()
         # end wxGlade
 
+    def on_Search_Enter(self, event):  # wxGlade: MyFrame.<event_handler>
+        self.set_building(self.text_ctrl__copy.GetValue())
+        ucoBUilding = self.get_building()
+        self.embed3(ucoBuildings[ucoBUilding])
+        
+        
     def on_button_pressed(self, event):  # wxGlade: MyFrame.<event_handler>
-        # print("Event handler 'on_button_pressed' not implemented!")
-        # self.set_Start(self.text_ctrl_.GetValue())
-        # self.set_End(self.text_ctrl_2.GetValue())
-        # start= self.get_Start()
-        # end=self.get_End()
- 
-       
         
-        # if start in ucoBuildings:
-        #     print(start)
-        #     print(ucoBuildings[start])
         
-        # if end in ucoBuildings:
-        #     print(end)
-        #     print(ucoBuildings[end])
+        route1.generate(self.text_ctrl_.GetValue(), self.text_ctrl_2.GetValue(), self.wheelChair)
 
+        
+        print(builder.route.getStartPoint())
+        print(builder.route.getMidPoint())
+        print(builder.route.getEndPoint())
             
 
-        # self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
-        
-        builder = Route_generator1.RouteBuilder()
-        Route_generator1.RouteDirector(builder.setMid("Nigh University Center", "MaxCHambers Library", False))
-        event.Skip()
+        self.embed_browser(builder.route.getStartPoint(), builder.route.getMidPoint(), builder.route.getEndPoint())
+       
 
 
     def on_checked(self, event):  # wxGlade: MyFrame.<event_handler>
@@ -211,62 +377,88 @@ class MainFrame(wx.Frame):
         self.wheelChair= True
 
 
-        event.Skip()
+        
    
     def on_enter(self, event):  # wxGlade: MyFrame.<event_handler>
         
+        route1.generate(self.text_ctrl_.GetValue(), self.text_ctrl_2.GetValue(), self.wheelChair)
         
-    
+        print(builder.route.getStartPoint())
+        print(builder.route.getMidPoint())
+        print(builder.route.getEndPoint())
+
+        self.embed_browser(builder.route.getStartPoint(), builder.route.getMidPoint(), builder.route.getEndPoint())
  
-       
-        
-    #    """ if start in ucoBuildings:
-    #         print(start)
-    #         print(ucoBuildings[start])
-        
-    #     if end in ucoBuildings:
-    #         print(end)
-    #         print(ucoBuildings[end])
-
-    #       """  
-
-        
-        self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
-        
-
         event.Skip()
 
     #----browser stuff-----------------------------------------------------------------------------------------------------------
-    def embed_browser(self, startPoint, midPoint, endPoint):
+    def embed_browser(self,start,mid,end):
         
-
-        #Gmplot
-        if self.wheelChair is False:
-            print('wheel chair = false')
-        else:
-            print('wheel chair = true')
-
-        print(startPoint)
-        print(midPoint)
-        print(endPoint)
-
-        
-
-        gmap = gmplot.GoogleMapPlotter.from_geocode('100 N University Dr, Edmond, OK 73034',16, apikey=apikey)
-        gmap.scatter(startPoint,endPoint,color=['blue', 'orange'])
-        gmap.plot(*midPoint,edge_width=7)
+        gmap = gmplot.GoogleMapPlotter.from_geocode('100 N University Dr, Edmond, OK 73034',17, apikey=apikey)
+        gmap.scatter(start,end,color=['blue', 'orange'])
+        gmap.plot(*mid,edge_width=7)
         gmap.draw("map.html")
         
         window_info = cef.WindowInfo()
         (width, height) = self.browser_panel.GetClientSize().Get()
         assert self.browser_panel.GetHandle(), "Window handle not available"
-        window_info.SetAsChild(self.browser_panel.GetHandle(),
-                               [0, 0, width, height])
-        self.browser = cef.CreateBrowserSync(window_info,
-                                             url="file:///C:/Users/ninte/Documents/School/Software%20I/Project/map.html")
+        window_info.SetAsPopup(self.browser_panel.GetHandle(),
+                              [0, 0, width, height])
+        
+        self.browser = cef.CreateBrowserSync(window_info, url="file:///C:/Users/ninte/Documents/School/Software%20I/Project/map.html")
+        
         self.browser.SetClientHandler(FocusHandler())
 
 
+
+    def embed2(self):
+        gmap = gmplot.GoogleMapPlotter.from_geocode('100 N University Dr, Edmond, OK 73034',16, apikey=apikey)
+        gmap.draw("map.html")
+
+        window_info = cef.WindowInfo()
+        (width, height) = self.browser_panel.GetClientSize().Get()
+        assert self.browser_panel.GetHandle(), "Window handle not available"
+        window_info.SetAsChild(self.browser_panel.GetHandle(),
+                               [0, 0, width, height])
+        self.browser = cef.CreateBrowserSync(window_info, url="file:///C:/Users/ninte/Documents/School/Software%20I/Project/map.html")
+        
+        self.browser.SetClientHandler(FocusHandler())
+
+
+
+
+    def embed3(self,building):
+        gmap = gmplot.GoogleMapPlotter.from_geocode(building,19, apikey=apikey)
+
+        if building is (35.65572618535371, -97.47124943368546):
+            print('nigh')
+            gmap.marker(building[0],building[1],color='blue',title='Nigh University Center',label='N',info_window="<a href='https://www.uco.edu/'>UCO Website</a>")
+        elif building is (35.657965312633785, -97.47373031501483):
+            gmap.marker(building[0],building[1],color='red',title='Max Chambers Library',label='L',info_window="<a href='https://www.uco.edu/'>UCO Website</a>")
+        else:
+            gmap.marker(building[0],building[1],color='green',title='Max Chambers Library',label='M',info_window="<a href='https://www.uco.edu/'>UCO Website</a>")
+
+        print(building)
+        gmap.draw("map.html")
+        window_info = cef.WindowInfo()
+        (width, height) = self.browser_panel.GetClientSize().Get()
+        assert self.browser_panel.GetHandle(), "Window handle not available"
+        window_info.SetAsPopup(self.browser_panel.GetHandle(),
+                               [0, 0, width, height])
+        self.browser = cef.CreateBrowserSync(window_info, url="file:///C:/Users/ninte/Documents/School/Software%20I/Project/map.html")
+        
+        self.browser.SetClientHandler(FocusHandler())
+        pass
+
+        
+        
+
+        
+
+    def get_building(self):
+        return self.building
+    def set_building(self,building):
+        self.building= building
     def get_Start(self):
         return self.startLocation
     def set_Start(self,x):

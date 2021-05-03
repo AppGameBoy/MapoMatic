@@ -1,696 +1,550 @@
 
-[2021-04-26 17:44:08] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 267, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 275, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 155, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 178, in embed_browser
-    (width, height) = self.browser_panel.GetClientSize().Get()
-AttributeError: 'MainFrame' object has no attribute 'browser_panel'
+[2021-05-01 14:50:40] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+TypeError: embed_browser() takes 3 positional arguments but 5 were given
 
 
-[2021-04-26 17:47:17] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 269, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 96, in __init__
-    self.panel_1 = wx.Panel(self,wx.ID_ANY)
-RuntimeError: super-class __init__() of type MainFrame was never called
-
-
-[2021-04-26 19:15:34] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 274, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 282, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 133, in __init__
-    sizer_2.Add(wx.Button(self.browser_panel,wx.ID_ANY))
-AttributeError: 'MainFrame' object has no attribute 'browser_panel'
-
-
-[2021-04-26 19:33:13] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 165, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 190, in embed_browser
-    assert browser_pane.GetHandle(), "Window handle not available"
-NameError: name 'browser_pane' is not defined
-
-
-[2021-04-26 19:41:47] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 165, in __init__
-    sizer1.Add(self.embed_browser())
-wx._core.wxAssertionError: C++ assertion ""window"" failed at ..\..\src\common\sizer.cpp(186) in wxSizerItem::DoSetWindow(): NULL window in wxSizerItem::SetWindow()
-
-
-[2021-04-26 20:02:41] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 203, in OnSetFocus
-    self.browser.SetFocus(True)
-  File "browser.pyx", line 567, in cefpython_py38.PyBrowser.SetFocus
-  File "browser.pyx", line 568, in cefpython_py38.PyBrowser.SetFocus
-  File "browser.pyx", line 217, in cefpython_py38.PyBrowser.GetCefBrowserHost
-  File "browser.pyx", line 212, in cefpython_py38.PyBrowser.GetCefBrowser
-Exception: PyBrowser.GetCefBrowser() failed: CefBrowser was destroyed
-
-
-[2021-04-26 20:04:48] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 279, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 287, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
-    window_info.SetAsChild(self.browser_panel.GetHandle(),Left
-TypeError: 'Edge' object is not subscriptable
-
-
-[2021-04-26 20:04:57] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 279, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 287, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
-    window_info.SetAsChild(self.browser_panel.GetHandle(),left
-NameError: name 'left' is not defined
-
-
-[2021-04-26 20:05:42] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
-    window_info.SetAsChild(self.browser_panel.GetHandle(),left)
-NameError: name 'left' is not defined
-
-
-[2021-04-26 20:06:42] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 278, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 286, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 166, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 192, in embed_browser
-    window_info.SetAsChild(self.browser_panel.GetHandle(),windowRect.left)
-NameError: name 'windowRect' is not defined
-
-
-[2021-04-26 20:13:50] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 140, in __init__
-    self.browser_panel.setsi
-AttributeError: 'Panel' object has no attribute 'setsi'
-
-
-[2021-04-26 20:37:29] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
-    self.sizer1.Add(self,wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'))
-TypeError: Sizer.Add(): arguments did not match any overloaded call:
-  overload 1: argument 2 has unexpected type 'Button'
-  overload 2: argument 2 has unexpected type 'Button'
-  overload 3: argument 1 has unexpected type 'MainFrame'
-  overload 4: argument 1 has unexpected type 'MainFrame'
-  overload 5: argument 1 has unexpected type 'MainFrame'
-  overload 6: argument 1 has unexpected type 'MainFrame'
-  overload 7: argument 1 has unexpected type 'MainFrame'
-  overload 8: argument 1 has unexpected type 'MainFrame'
-  overload 9: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-26 20:37:41] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
-    self.sizer1.Add(self.browser_panel,wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'))
-TypeError: Sizer.Add(): arguments did not match any overloaded call:
-  overload 1: argument 2 has unexpected type 'Button'
-  overload 2: argument 2 has unexpected type 'Button'
-  overload 3: argument 1 has unexpected type 'Panel'
-  overload 4: argument 1 has unexpected type 'Panel'
-  overload 5: argument 1 has unexpected type 'Panel'
-  overload 6: argument 1 has unexpected type 'Panel'
-  overload 7: argument 1 has unexpected type 'Panel'
-  overload 8: argument 1 has unexpected type 'Panel'
-  overload 9: argument 1 has unexpected type 'Panel'
-
-
-[2021-04-26 20:41:17] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 277, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 285, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 141, in __init__
-    self.sizer1.Add(wx.Button(self.browser_panel,wx.ID_ANY,'sheesh'),0,wx.ALIGN_BOTTOM)
-wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_BOTTOM)" failed at ..\..\src\common\sizer.cpp(2136) in wxBoxSizer::DoInsert(): Vertical alignment flags are ignored in vertical sizers
-
-
-[2021-04-27 14:53:35] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 280, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 288, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/ceftests.py", line 145, in __init__
-    self.sizer2.Add(wx.Button(self,wx.ID_ANY,'sheesh'),0,wx.ALIGN_RIGHT)
-wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_RIGHT)" failed at ..\..\src\common\sizer.cpp(2168) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
-
-
-[2021-04-27 16:15:15] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 177, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 68, in __init__
-    wx.Frame.__init__(self, *args, **kwds)
-TypeError: Frame(): arguments did not match any overloaded call:
-  overload 1: 'style' is not a valid keyword argument
-  overload 2: 'style' is not a valid keyword argument
-
-
-[2021-04-27 16:16:37] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 177, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 98, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 128, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 16:20:45] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 178, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 98, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 108, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 16:27:23] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 179, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 187, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 99, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 109, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 16:27:36] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 180, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 188, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 100, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 110, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 17:52:25] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 180, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 188, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 100, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 110, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:00:56] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 106, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 116, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:04:34] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 69, in __init__
-    kwds["style"] = kwds.get("style", 0) | wx.DEFAULT_FRAME_STYLE
-NameError: name 'kwds' is not defined
-
-
-[2021-04-27 18:04:41] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 106, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 116, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:08:37] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:20:35] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:20:41] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:26:01] Traceback (most recent call last):
-  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 193, in initialize
-    frame = MyFrame()
-  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:27:41] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MyFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:30:06] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:35:51] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 185, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 193, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 105, in __init__
-    self.embed_browser()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 115, in embed_browser
-    assert self.browser_panel.GetHandle(), "Window handle not available"
-AssertionError: Window handle not available
-
-
-[2021-04-27 18:36:39] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 186, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 194, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 70, in __init__
-    title='wxPython example', size=size)
-NameError: name 'size' is not defined
-
-
-[2021-04-27 19:25:32] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 176, in OnClose
-    self.clear_browser_references()
-AttributeError: 'MainFrame' object has no attribute 'clear_browser_references'
-
-
-[2021-04-27 19:33:09] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 215, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 223, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 117, in __init__
-    self.browser_panel.Bind(wx.EVT_SET_FOCUS, self.OnSetFocus)
-AttributeError: 'MainFrame' object has no attribute 'browser_panel'
-
-
-[2021-04-27 19:53:11] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 220, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 228, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 127, in __init__
-    self.sizer_3.Add(self.browser_panel)
-wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
-
-
-[2021-04-27 19:53:26] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 220, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 228, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 127, in __init__
-    self.sizer_3.Add(self.browser_panel)
-wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
-
-
-[2021-04-27 20:20:22] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 219, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 227, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 126, in __init__
-    self.sizer_3.Add(self.browser_panel,400,400,wx.EXPAND)
-wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_CENTRE_HORIZONTAL)" failed at ..\..\src\common\sizer.cpp(2176) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
-
-
-[2021-04-27 20:20:48] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 219, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 227, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI.py", line 126, in __init__
-    self.sizer_3.Add(self.browser_panel,400,400)
-wx._core.wxAssertionError: C++ assertion "!(flags & wxALIGN_CENTRE_HORIZONTAL)" failed at ..\..\src\common\sizer.cpp(2176) in wxBoxSizer::DoInsert(): Horizontal alignment flags are ignored in horizontal sizers
-
-
-[2021-04-27 21:03:23] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 226, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 234, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 133, in __init__
-    sizer_3.Add(self.browser_panel)
-wx._core.wxAssertionError: C++ assertion ""!m_containingSizer"" failed at ..\..\src\common\wincmn.cpp(2471) in wxWindowBase::SetContainingSizer(): Adding a window already in a sizer, detach it first!
-
-
-[2021-04-27 21:33:57] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
-    self.text_ctrl_search.AutoComplete('Nigh Center','Library','Mass Comm','CompSci')
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'str'
-  overload 2: argument 1 has unexpected type 'str'
-
-
-[2021-04-27 21:34:14] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
-    self.text_ctrl_search.AutoComplete(self,'Nigh Center','Library','Mass Comm','CompSci')
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'MainFrame'
-  overload 2: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-27 21:34:28] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 235, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 108, in __init__
-    self.text_ctrl_search.AutoComplete(self,['Nigh Center','Library','Mass Comm','CompSci'])
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'MainFrame'
-  overload 2: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-27 21:37:32] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
-    self.text_ctrl_search.AutoComplete(self,buildingNames)
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'MainFrame'
-  overload 2: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-27 22:04:25] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
-    self.text_ctrl_search.AutoComplete(self,choices)
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'MainFrame'
-  overload 2: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-27 22:06:09] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
-    self.text_ctrl_search.AutoComplete(self)
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: argument 1 has unexpected type 'MainFrame'
-  overload 2: argument 1 has unexpected type 'MainFrame'
-
-
-[2021-04-27 22:06:28] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 228, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 236, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 109, in __init__
-    self.text_ctrl_search.AutoComplete()
-TypeError: SearchCtrl.AutoComplete(): arguments did not match any overloaded call:
-  overload 1: not enough arguments
-  overload 2: not enough arguments
-
-
-[2021-04-28 17:15:23] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 265, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 273, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 139, in __init__
-    self.Bind(wx.EVT_BUTTON, self.on_button_pressed, self.execute_button)
-AttributeError: 'MainFrame' object has no attribute 'execute_button'
-
-
-[2021-04-28 17:48:01] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 271, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 279, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 123, in __init__
-    print(self.text_ctrl_.GetStyle())
-AttributeError: 'SearchCtrl' object has no attribute 'GetStyle'
-
-
-[2021-04-30 13:33:38] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 217, in OnSize
-    self.browser.NotifyMoveOrResizeStarted()
-AttributeError: 'NoneType' object has no attribute 'NotifyMoveOrResizeStarted'
-
-
-[2021-04-30 15:16:53] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 177, in on_enter
-    print(startLocation.start)
-AttributeError: 'str' object has no attribute 'start'
-
-
-[2021-04-30 15:19:01] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 176, in on_enter
-    test= self.get_Start()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 213, in get_Start
-    return self.startlocation
-AttributeError: 'MainFrame' object has no attribute 'startlocation'
-
-
-[2021-04-30 15:56:34] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 176, in on_enter
-    test= self.get_Start()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 214, in get_Start
-    return self.startlocation
-AttributeError: 'MainFrame' object has no attribute 'startlocation'
-
-
-[2021-04-30 16:09:05] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 180, in on_enter
-    print(self.getStartLocation)
-AttributeError: 'MainFrame' object has no attribute 'getStartLocation'
-
-
-[2021-04-30 16:11:33] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 177, in on_enter
-    end=self.get_End()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 218, in get_End
-    return self.endLocation
-AttributeError: 'MainFrame' object has no attribute 'endLocation'
-
-
-[2021-04-30 16:16:52] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 294, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 302, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser()
-TypeError: embed_browser() missing 2 required positional arguments: 'a' and 'b'
-
-
-[2021-04-30 16:17:26] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 237, in OnSize
-    self.browser.NotifyMoveOrResizeStarted()
-AttributeError: 'MainFrame' object has no attribute 'browser'
-
-
-[2021-04-30 16:22:47] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_enter
-    self.embed_browser(ucoBuildings[start],ucoBuildings[end])
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 201, in embed_browser
-    gmap = gmplot.GoogleMapPlotter.from_geocode((a,b),16, apikey=apikey)
-  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 444, in from_geocode
-    lat, lng = cls.geocode(location, apikey=apikey)
-  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 485, in geocode
-    latlng_dict = geocode['results'][0]['geometry']['location']
-IndexError: list index out of range
-
-
-[2021-04-30 16:28:21] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser('37.766956','-122.479481')
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
-    gmap.scatter(a,b)
-  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 690, in scatter
-    raise ValueError("Number of latitudes and longitudes don't match!")
-ValueError: Number of latitudes and longitudes don't match!
-
-
-[2021-04-30 16:29:36] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser('37.766956','-122.479481')
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
-    gmap.scatter((a,b))
-TypeError: scatter() missing 1 required positional argument: 'lngs'
-
-
-[2021-04-30 16:29:54] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser('37.766956','-122.479481')
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
-    gmap.scatter(a,b)
-  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 690, in scatter
-    raise ValueError("Number of latitudes and longitudes don't match!")
-ValueError: Number of latitudes and longitudes don't match!
-
-
-[2021-04-30 16:30:01] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser('37.766956','-122.479481')
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
-    gmap.scatter(a)
-TypeError: scatter() missing 1 required positional argument: 'lngs'
-
-
-[2021-04-30 16:35:17] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 295, in OnInit
-    self.initialize()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 303, in initialize
-    frame = MainFrame()
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 162, in __init__
-    self.embed_browser('37.766956','-122.479481')
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 202, in embed_browser
-    gmap.scatter()
-TypeError: scatter() missing 2 required positional arguments: 'lats' and 'lngs'
-
-
-[2021-04-30 16:40:08] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 240, in OnSize
-    self.browser.NotifyMoveOrResizeStarted()
-AttributeError: 'MainFrame' object has no attribute 'browser'
-
-
-[2021-04-30 18:31:27] Traceback (most recent call last):
-  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 253, in OnClose
+[2021-05-01 14:51:48] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 293, in OnClose
     if not self.browser:
 AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 14:52:22] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 243, in embed_browser
+    gmap.scatter(lat,lng,color=['blue', 'orange'])
+NameError: name 'lat' is not defined
+
+
+[2021-05-01 14:54:00] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 244, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 14:55:23] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 245, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+NameError: name 'path' is not defined
+
+
+[2021-05-01 14:55:38] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 246, in embed_browser
+    gmap.draw("map.html")
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1050, in draw
+    self._write_html(w)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1121, in _write_html
+    self.write_points(w, color_cache)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1187, in write_points
+    self.write_point(w, point[0], point[1], point[2], point[3], point[4], color_cache, point[5], point[6], point[7]) # TODO: Not maintainable.
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1235, in write_point
+    marker = _Marker(_format_LatLng(lat, lng, precision), name=marker_name, title=title, label=label, icon=marker_icon.name, draggable=draggable)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 52, in _format_LatLng
+    return 'new google.maps.LatLng(%.*f, %.*f)' % (precision, lat, precision, lng)
+TypeError: must be real number, not str
+
+
+[2021-05-01 14:56:30] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 246, in embed_browser
+    gmap.draw("map.html")
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1050, in draw
+    self._write_html(w)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1121, in _write_html
+    self.write_points(w, color_cache)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1187, in write_points
+    self.write_point(w, point[0], point[1], point[2], point[3], point[4], color_cache, point[5], point[6], point[7]) # TODO: Not maintainable.
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1235, in write_point
+    marker = _Marker(_format_LatLng(lat, lng, precision), name=marker_name, title=title, label=label, icon=marker_icon.name, draggable=draggable)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 52, in _format_LatLng
+    return 'new google.maps.LatLng(%.*f, %.*f)' % (precision, lat, precision, lng)
+TypeError: must be real number, not str
+
+
+[2021-05-01 14:58:13] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 246, in embed_browser
+    gmap.draw("map.html")
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1050, in draw
+    self._write_html(w)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1121, in _write_html
+    self.write_points(w, color_cache)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1187, in write_points
+    self.write_point(w, point[0], point[1], point[2], point[3], point[4], color_cache, point[5], point[6], point[7]) # TODO: Not maintainable.
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1235, in write_point
+    marker = _Marker(_format_LatLng(lat, lng, precision), name=marker_name, title=title, label=label, icon=marker_icon.name, draggable=draggable)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 52, in _format_LatLng
+    return 'new google.maps.LatLng(%.*f, %.*f)' % (precision, lat, precision, lng)
+TypeError: must be real number, not str
+
+
+[2021-05-01 14:59:08] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 246, in embed_browser
+    gmap.draw("map.html")
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1050, in draw
+    self._write_html(w)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1121, in _write_html
+    self.write_points(w, color_cache)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1187, in write_points
+    self.write_point(w, point[0], point[1], point[2], point[3], point[4], color_cache, point[5], point[6], point[7]) # TODO: Not maintainable.
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1235, in write_point
+    marker = _Marker(_format_LatLng(lat, lng, precision), name=marker_name, title=title, label=label, icon=marker_icon.name, draggable=draggable)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 52, in _format_LatLng
+    return 'new google.maps.LatLng(%.*f, %.*f)' % (precision, lat, precision, lng)
+TypeError: must be real number, not str
+
+
+[2021-05-01 15:01:27] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(start,end)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 246, in embed_browser
+    gmap.draw("map.html")
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1050, in draw
+    self._write_html(w)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1121, in _write_html
+    self.write_points(w, color_cache)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1187, in write_points
+    self.write_point(w, point[0], point[1], point[2], point[3], point[4], color_cache, point[5], point[6], point[7]) # TODO: Not maintainable.
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 1235, in write_point
+    marker = _Marker(_format_LatLng(lat, lng, precision), name=marker_name, title=title, label=label, icon=marker_icon.name, draggable=draggable)
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 52, in _format_LatLng
+    return 'new google.maps.LatLng(%.*f, %.*f)' % (precision, lat, precision, lng)
+TypeError: must be real number, not str
+
+
+[2021-05-01 15:11:05] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 187, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 245, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 15:23:27] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 306, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 15:40:22] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 15:43:40] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 320, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 15:53:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 233, in embed_browser
+    if self.wheelChair is False:
+AttributeError: 'MainFrame' object has no attribute 'wheelChair'
+
+
+[2021-05-01 15:54:50] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 316, in OnSize
+    self.browser.NotifyMoveOrResizeStarted()
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 16:19:31] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 363, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 17:03:46] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 407, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 415, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 163, in __init__
+    self.embed_browser()
+TypeError: embed_browser() missing 4 required positional arguments: 'start_lat', 'end_lat', 'start_lng', and 'end_lng'
+
+
+[2021-05-01 17:04:51] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 350, in OnSize
+    self.browser.NotifyMoveOrResizeStarted()
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 17:05:03] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 363, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 18:05:21] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 363, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 18:14:01] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:14:34] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:25:41] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:26:20] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 224, in on_enter
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:29:33] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:31:37] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 18:33:12] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 192, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 313, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 19:05:31] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 19:06:45] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 19:39:22] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 365, in embed_browser
+    gmap.plot(*path,edge_width=7,color='red')
+TypeError: plot() got multiple values for argument 'color'
+
+
+[2021-05-01 19:40:15] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 365, in embed_browser
+    gmap.plot(*path,edge_width=7)
+TypeError: plot() takes from 3 to 5 positional arguments but 8 were given
+
+
+[2021-05-01 19:54:30] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 20:00:59] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 20:03:13] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 20:06:05] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 20:07:32] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 251, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 370, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-01 21:56:53] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 422, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:36:45] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22copy.py", line 303, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:37:39] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22copy.py", line 303, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:38:58] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22copy.py", line 303, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:42:01] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22copy.py", line 303, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:43:53] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22copy.py", line 307, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-01 22:56:51] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 423, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-02 16:25:20] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 423, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-02 16:41:56] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 423, in OnClose
+    if not self.browser:
+AttributeError: 'MainFrame' object has no attribute 'browser'
+
+
+[2021-05-02 16:58:42] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 253, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 373, in embed_browser
+    gmap.plot(*path,edge_width=7)
+TypeError: plot() missing 2 required positional arguments: 'lats' and 'lngs'
+
+
+[2021-05-02 17:00:06] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 253, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 373, in embed_browser
+    gmap.plot(*path,edge_width=7)
+TypeError: plot() missing 2 required positional arguments: 'lats' and 'lngs'
+
+
+[2021-05-02 17:12:46] Traceback (most recent call last):
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI22.py", line 253, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:\Users\ninte\Documents\School\Software I\Project\MapoMaticUI22.py", line 374, in embed_browser
+    gmap.plot(*path,edge_width=7)
+TypeError: plot() missing 2 required positional arguments: 'lats' and 'lngs'
+
+
+[2021-05-02 17:18:33] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 469, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 477, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 226, in __init__
+    self.embed_browser(35.65572618535371,35.657162786958885,-97.47124943368546,-97.47134177810977)
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 375, in embed_browser
+    gmap.plot(*path,edge_width=7)
+UnboundLocalError: local variable 'path' referenced before assignment
+
+
+[2021-05-02 17:46:56] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 245, in on_button_pressed
+    self.sizer_1.Remove(self.browser_panel)
+TypeError: Sizer.Remove(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'Panel'
+  overload 2: argument 1 has unexpected type 'Panel'
+
+
+[2021-05-02 17:47:30] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 494, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 502, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 227, in __init__
+    self.sizer_1.Remove(self.browser_panel)
+TypeError: Sizer.Remove(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'Panel'
+  overload 2: argument 1 has unexpected type 'Panel'
+
+
+[2021-05-02 17:48:10] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 494, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 502, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 222, in __init__
+    sizer_1.Remove(self.browser_panel)
+TypeError: Sizer.Remove(): arguments did not match any overloaded call:
+  overload 1: argument 1 has unexpected type 'Panel'
+  overload 2: argument 1 has unexpected type 'Panel'
+
+
+[2021-05-02 17:56:00] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 256, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 384, in embed_browser
+    window_info.SetAsOffscreen(self.browser_panel.GetHandle(),
+TypeError: SetAsOffscreen() takes exactly one argument (2 given)
+
+
+[2021-05-02 18:02:56] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 238, in on_button_pressed
+    wx.Frame.DestroyChildren()
+TypeError: Window.DestroyChildren(): first argument of unbound method must have type 'Window'
+
+
+[2021-05-02 18:12:48] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 491, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 499, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 219, in __init__
+    self.embed2()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 392, in embed2
+    gmap = gmplot.GoogleMapPlotter.from_geocode(35.65788082545061, -97.47177522238063,17, apikey=apikey)
+TypeError: from_geocode() got multiple values for argument 'apikey'
+
+
+[2021-05-02 18:30:23] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 282, in on_enter
+    wx.Frame.Refresh(self.browser_panel.GetHandle())
+TypeError: Window.Refresh(): first argument of unbound method must have type 'Window'
+
+
+[2021-05-02 18:37:56] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 522, in OnInit
+    self.initialize()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 530, in initialize
+    frame = MainFrame()
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 222, in __init__
+    self.Bind(wx.EVT_SEARCHCTRL_SEARCH_BTN, self.on_Search_Enter, self.text_ctrl__copy)
+AttributeError: 'MainFrame' object has no attribute 'on_Search_Enter'
+
+
+[2021-05-02 18:43:39] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 287, in on_enter
+    wx.Frame.Refresh(self.browser_panel.GetHandle())
+TypeError: Window.Refresh(): first argument of unbound method must have type 'Window'
+
+
+[2021-05-02 18:45:51] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 252, in on_Search_Enter
+    self.embed3(ucoBuildings[ucoBUilding])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 426, in embed3
+    gmap.scatter(building[0],building[1],color=['blue', 'orange'])
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 689, in scatter
+    if len(lats) != len(lngs):
+TypeError: object of type 'float' has no len()
+
+
+[2021-05-02 18:46:36] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 274, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+KeyError: ''
+
+
+[2021-05-02 18:49:05] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 252, in on_Search_Enter
+    self.embed3(ucoBuildings[ucoBUilding])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 426, in embed3
+    gmap.scatter(35.65563899390924, -97.47097476725821,color=['blue', 'orange'])
+  File "C:\Python3\lib\site-packages\gmplot\gmplot.py", line 689, in scatter
+    if len(lats) != len(lngs):
+TypeError: object of type 'float' has no len()
+
+
+[2021-05-02 18:52:34] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 252, in on_Search_Enter
+    self.embed3(ucoBuildings[ucoBUilding])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 426, in embed3
+    gmap.marker(building[0],building[1],'cyan',ucoBuildings[building],'N')
+KeyError: (35.65572618535371, -97.47124943368546)
+
+
+[2021-05-02 18:56:44] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 252, in on_Search_Enter
+    self.embed3(ucoBuildings[ucoBUilding])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 426, in embed3
+    gmap.marker(building[0],building[1],color='blue',title=ucoBuildings[building],label='N',info_window="<a href='https://www.uco.edu/'>UCO Website</a>")
+KeyError: (35.65572618535371, -97.47124943368546)
+
+
+[2021-05-02 19:09:30] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 274, in on_button_pressed
+    self.embed_browser(ucoBuildings[start][0],ucoBuildings[end][0],ucoBuildings[start][1],ucoBuildings[end][1])
+KeyError: ''
+
+
+[2021-05-02 19:09:39] Traceback (most recent call last):
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 252, in on_Search_Enter
+    self.embed3(ucoBuildings[ucoBUilding])
+  File "c:/Users/ninte/Documents/School/Software I/Project/MapoMaticUI22.py", line 426, in embed3
+    gmap.marker(building[0],building[1],color='blue',title=ucoBuildings.keys(0),label='N',info_window="<a href='https://www.uco.edu/'>UCO Website</a>")
+TypeError: keys() takes no arguments (1 given)
 
